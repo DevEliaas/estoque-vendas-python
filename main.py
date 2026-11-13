@@ -1,3 +1,5 @@
+produtos = []
+
 while True: 
     print('=== CONTROLE DE ESTOQUE ===\n')
     print('[1] Cadastrar produtos')
@@ -8,8 +10,15 @@ while True:
     while opcao not in ('0', '1', '2'):
         opcao = input('Opção inválida, Digite novamente: ')        
 
+    print('*' * 50)
     if opcao == '1':
-        print('Cadastro de produtos em desenvolvimento.')
+        nome = input('Nome do produto: ')
+        quantidades = int(input('Quantidade em estoque: '))
+        produtos.append((nome, quantidades))
+        
+        print('*' * 50)
+        print(f'Produto: {nome}\nUnidades:{quantidades}\nProduto adicionado!')
+
     elif opcao == '2':
         print('Consulta de produtos em desenvolvimento.')
     else:
